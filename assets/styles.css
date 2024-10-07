@@ -1,0 +1,252 @@
+
+
+/* Remove the border and box shadow for the range slider */
+#year-slider .rc-slider {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Remove the outline when the range slider is focused */
+#year-slider .rc-slider-handle {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Ensure no border around the slider container */
+#year-slider-card .card-body {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Ensure the entire card becomes grey when hovered */
+#year-slider-card {
+    transition: background-color 0.3s;  /* Smooth transition */
+}
+
+#year-slider-card:hover {
+    background-color: #f8f8f8 !important;  /* Make the entire card grey on hover */
+}
+
+#district-filter-card:hover {
+    background-color: #f8f8f8 !important;
+}
+
+
+/* Card-specific hover effect (no pressed-in effect) */
+#total-burglaries-card:hover {
+    background-color: #f8f8f8 !important;  /* Grey background on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);  /* Keep the subtle shadow on hover */
+}
+
+#safest-stadtkreis-card:hover {
+    background-color: #f8f8f8 !important;  
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);  /* Consistent subtle shadow */
+}
+
+#dangerous-stadtkreis-card:hover {
+    background-color: #f8f8f8 !important;  
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);  /* Consistent subtle shadow */
+}
+
+/* Metric Button Styles */
+.metric-button {
+    background-color: #ffffff !important;  /* Button is always white by default */
+    color: rgb(0, 0, 0);  /* Default text color is grey */
+    border: 1px solid #cccccc;  /* Default border color */
+    font-family: 'Helvetica';  /* Default font family */
+    font-weight: bold;
+    box-shadow: 0 6px 10px 6px rgba(0, 0, 0, 0.1);  /* Add a shadow effect */
+    transition: background-color 0.3s, box-shadow 0.2s;  /* Smooth transition for hover */
+    cursor: pointer;  /* Pointer cursor on hover */
+}
+
+/* Change button appearance when hovering - pressed-in effect */
+.metric-button:hover {
+    background-color: rgba(171, 226, 251, 0.421) !important;  /* Light grey background when hovering */
+    color: #000000;  /* Text turns black on hover */
+    font-family: 'Helvetica';
+    font-weight: bold; 
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3)!important;
+    }
+
+/* Indicate active button - pressed-in effect */
+.metric-button.active {
+    background-color: #efefef !important;  /* Light grey background for active button */
+    color: #000000 !important; 
+    font-weight: bold !important;  
+    font-family: 'Helvetica'; 
+    box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.3); /* Pressed-in look for active button */
+}
+
+/* District Circle Button Styling */
+.district-circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;  /* Make the button circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    margin: 0.01%;
+    border: none;
+    transition: background-color 0.3s, box-shadow 0.2s, transform 0.2s; /* Smooth transition for hover and active */
+}
+
+
+
+/* Additional Hover Effect for District Circles - Only Background Changes */
+.metric-button.district-circle:hover {
+    background-color: rgba(171, 226, 251, 0.421) !important;  /* Light grey background on hover */
+    color: #000000;  /* Text turns black on hover */
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3) !important; /* Pressed-in look on hover */
+     /* Remove any transform on hover */
+}
+
+/* Active State for District Circles */
+.metric-button.district-circle.active {
+    background-color: #efefef !important;  /* Light grey background for active button */
+    color: #000000 !important; 
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3); /* Pressed-in look for active button */
+    transform: translateY(2px); /* Slight downward movement to simulate pressing */
+}
+
+/* Ensure Non-Active Buttons Maintain "Popped Out" Look */
+.metric-button.district-circle:not(.active) {
+    box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.1); /* Light shadow for "popped out" effect */
+}
+
+/* Optional: Smooth Scaling on Hover for Enhanced Interaction */
+.metric-button.district-circle:hover {
+    transform: scale(1.05);
+    background-color: rgba(171, 226, 251, 0.421) !important; /* Ensure background color change remains */
+}
+
+/* Responsive Adjustments for District Circles */
+@media (max-width: 768px) {
+    .district-circle {
+        width: 50px;
+        height: 50px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .district-circle {
+        width: 40px;
+        height: 40px;
+        font-size: 10px;
+    }
+}
+
+/* Additional Styling for Reset Filters Button */
+#button-reset-filters {
+    background-color: #ffffff !important;
+    color: rgb(83, 83, 83) !important;
+    border: 1px solid #cccccc !important;
+    font-family: 'Helvetica' !important;
+    font-weight: bold !important;
+    box-shadow: 0 6px 10px 6px rgba(0, 0, 0, 0.1) !important;
+    transition: background-color 0.3s, box-shadow 0.2s !important;
+    cursor: pointer !important;
+}
+
+#button-reset-filters:hover {
+    background-color: rgba(171, 226, 251, 0.421) !important;
+    color: #000000 !important;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3) !important;
+}
+
+#button-reset-filters.active {
+    background-color: #efefef !important;
+    color: #000000 !important;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3) !important;
+    transform: translateY(2px) !important;
+}
+
+/* Style the tooltip itself */
+.tooltip-inner {
+    background-color: #f8f8f800 !important;  
+    color: rgb(0, 0, 0) !important; 
+    font-family: "times new roman"; 
+    font-style: italic; 
+    padding: 10px;  
+    border-radius: 10px;  
+}
+
+/* Customize the arrow of the tooltip */
+.tooltip-arrow {
+    border-top-color: rgba(171, 226, 251, 0.9) !important;  
+     border-radius: 5px;  /* Smooths the corners of the arrow */
+}
+
+/* General card hover effect */
+.card-hover {
+    position: relative;
+    overflow: hidden; /* Ensure content stays inside the card */
+    transition: transform 0.3s;
+}
+
+.card-hover:hover {
+    transform: scale(1.05);  /* Slightly enlarge the card on hover */
+}
+
+/* General card styling */
+.card-hover {
+    position: relative;
+    overflow: hidden;
+    height: 100px;  /* Fix the height of the card */
+    border-radius: 10px;
+    background-color: #ffffff00;  /* Transparent background to blend with the blur */
+    transition: transform 0.3s, filter 0.3s; /* Smooth transition for blur and transform */
+}
+
+.card-hover:hover {
+    transform: scale(1.01);  /* Slightly enlarge the card on hover */
+}
+
+/* Tooltip-style overlay on card hover */
+.card-hover .card-tooltip {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* Center the tooltip text in the card */
+    background: rgba(248, 248, 248, 0.975);  /* Semi-transparent background for the tooltip */
+    color: black;
+    font-family: "Times new roman";
+    font-style: italic;
+    font-size: 15px;  /* Set a smaller font size */
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: none;  /* No shadow for the tooltip to blend with the card */
+    opacity: 0;  /* Initially hidden */
+ /* Smooth fade-in effect */
+    width: 110%;  /* Set the width to fit within the card */
+}
+
+/* Show the tooltip when hovering over the card */
+.card-hover:hover .card-tooltip {
+    opacity: 1;  /* Make the tooltip visible */
+}
+
+/* Custom Tooltip Style with Background and Text Color */
+.custom-tooltip-style {
+    white-space: nowrap !important;
+    max-width: none !important;
+    font-family: 'Times New Roman';
+    font-style: italic;
+    font-size: 16px;
+    background-color: #f0f0f000 !important;  /* Light grey background */
+    color: rgba(171, 226, 251, 0.9) !important;
+}
+
+/* Custom Tooltip Style to Hide the Arrow */
+.custom-tooltip-style .tooltip-arrow {
+    display: none;
+}
+
+/* Optional: Adjust Tooltip Positioning Since Arrow is Removed */
+.custom-tooltip-style .tooltip-inner {
+    /* You can adjust padding or other properties if needed */
+    padding: 12px 1px;
+}
